@@ -31,16 +31,16 @@ library
   exposed-modules:      System.Posix.Syslog.UDP
 
   Build-Depends:        base >= 3 && < 5
-                      , bytestring < 0.11
-                      , hsyslog >= 5 && < 6
-                      , text < 1.3
-                      , time < 1.10
-                      , unix < 2.8
+                      , bytestring
+                      , hsyslog
+                      , text
+                      , time
+                      , unix
   if flag(network--GE-3_0_0)
     build-depends: network-bsd >= 2.8.1 && <2.9,
                    network >= 3.0 && <3.2
   else
-    build-depends: network >= 2.6.3.1 && <2.9
+    build-depends: network
 
 test-suite specs
   default-language:     Haskell2010
